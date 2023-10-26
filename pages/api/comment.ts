@@ -14,6 +14,7 @@ export default async function handler(
       return createComments(req, res)
     case 'DELETE':
       return deleteComments(req, res)
+     
     default:
       return res.status(400).json({ message: 'Invalid method.' })
   }
