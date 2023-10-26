@@ -15,8 +15,7 @@ export default function CommentList({ comments, onDelete }: CommentListProps) {
       {comments &&
         comments.map((comment) => {
           const isAuthor = user && user.sub === comment.user.sub
-          const isAdmin =
-            user && user.email === process.env.NEXT_PUBLIC_AUTH0_ADMIN_EMAIL
+          const isAdmin = user && user.email === process.env.NEXT_PUBLIC_AUTH0_ADMIN_EMAIL
 
           return (
             <div key={comment.created_at} className="flex space-x-4">

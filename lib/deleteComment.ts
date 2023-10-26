@@ -38,6 +38,7 @@ export default async function deleteComments(
 
     return res.status(200).end()
   } catch (err) {
+   
     return res.status(400)
   }
 }
